@@ -15,6 +15,8 @@
 		6514C2E91DECEC4200681374 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6514C2E71DECEC4200681374 /* Main.storyboard */; };
 		6514C2EB1DECEC4200681374 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6514C2EA1DECEC4200681374 /* Assets.xcassets */; };
 		6514C2EE1DECEC4200681374 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6514C2EC1DECEC4200681374 /* LaunchScreen.storyboard */; };
+		920354861DEDACC900A16573 /* Twist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6514C2C11DECE9FE00681374 /* Twist.framework */; };
+		920354871DEDACC900A16573 /* Twist.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6514C2C11DECE9FE00681374 /* Twist.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,16 +27,37 @@
 			remoteGlobalIDString = 6514C2C01DECE9FE00681374;
 			remoteInfo = Twist;
 		};
+		920354881DEDACC900A16573 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6514C2B81DECE9FE00681374 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6514C2C01DECE9FE00681374;
+			remoteInfo = Twist;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9203548A1DEDACC900A16573 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				920354871DEDACC900A16573 /* Twist.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		6514C2C11DECE9FE00681374 /* Twist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Twist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6514C2C51DECE9FE00681374 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6514C2CA1DECE9FE00681374 /* TwistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6514C2CA1DECE9FE00681374 /* TwistTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TwistTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6514C2CF1DECE9FE00681374 /* TwistTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwistTests.swift; sourceTree = "<group>"; };
 		6514C2D11DECE9FE00681374 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6514C2DB1DECEA4300681374 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
-		6514C2E11DECEC4200681374 /* TwistExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwistExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6514C2E11DECEC4200681374 /* TwistExample-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TwistExample-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6514C2E31DECEC4200681374 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6514C2E51DECEC4200681374 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6514C2E81DECEC4200681374 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				920354861DEDACC900A16573 /* Twist.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,8 +96,8 @@
 		6514C2B71DECE9FE00681374 = {
 			isa = PBXGroup;
 			children = (
-				6514C2C31DECE9FE00681374 /* Twist */,
-				6514C2CE1DECE9FE00681374 /* TwistTests */,
+				9203547E1DEDAC1F00A16573 /* Sources */,
+				9203547F1DEDAC2400A16573 /* Tests */,
 				6514C2E21DECEC4200681374 /* TwistExample */,
 				6514C2C21DECE9FE00681374 /* Products */,
 			);
@@ -83,8 +107,8 @@
 			isa = PBXGroup;
 			children = (
 				6514C2C11DECE9FE00681374 /* Twist.framework */,
-				6514C2CA1DECE9FE00681374 /* TwistTests.xctest */,
-				6514C2E11DECEC4200681374 /* TwistExample.app */,
+				6514C2CA1DECE9FE00681374 /* TwistTests-iOS.xctest */,
+				6514C2E11DECEC4200681374 /* TwistExample-iOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -120,6 +144,22 @@
 			path = TwistExample;
 			sourceTree = "<group>";
 		};
+		9203547E1DEDAC1F00A16573 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				6514C2C31DECE9FE00681374 /* Twist */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		9203547F1DEDAC2400A16573 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				6514C2CE1DECE9FE00681374 /* TwistTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -133,9 +173,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		6514C2C01DECE9FE00681374 /* Twist */ = {
+		6514C2C01DECE9FE00681374 /* Twist-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6514C2D51DECE9FE00681374 /* Build configuration list for PBXNativeTarget "Twist" */;
+			buildConfigurationList = 6514C2D51DECE9FE00681374 /* Build configuration list for PBXNativeTarget "Twist-iOS" */;
 			buildPhases = (
 				6514C2BC1DECE9FE00681374 /* Sources */,
 				6514C2BD1DECE9FE00681374 /* Frameworks */,
@@ -146,14 +186,14 @@
 			);
 			dependencies = (
 			);
-			name = Twist;
+			name = "Twist-iOS";
 			productName = Twist;
 			productReference = 6514C2C11DECE9FE00681374 /* Twist.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		6514C2C91DECE9FE00681374 /* TwistTests */ = {
+		6514C2C91DECE9FE00681374 /* TwistTests-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6514C2D81DECE9FE00681374 /* Build configuration list for PBXNativeTarget "TwistTests" */;
+			buildConfigurationList = 6514C2D81DECE9FE00681374 /* Build configuration list for PBXNativeTarget "TwistTests-iOS" */;
 			buildPhases = (
 				6514C2C61DECE9FE00681374 /* Sources */,
 				6514C2C71DECE9FE00681374 /* Frameworks */,
@@ -164,26 +204,28 @@
 			dependencies = (
 				6514C2CD1DECE9FE00681374 /* PBXTargetDependency */,
 			);
-			name = TwistTests;
+			name = "TwistTests-iOS";
 			productName = TwistTests;
-			productReference = 6514C2CA1DECE9FE00681374 /* TwistTests.xctest */;
+			productReference = 6514C2CA1DECE9FE00681374 /* TwistTests-iOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		6514C2E01DECEC4200681374 /* TwistExample */ = {
+		6514C2E01DECEC4200681374 /* TwistExample-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6514C2F01DECEC4200681374 /* Build configuration list for PBXNativeTarget "TwistExample" */;
+			buildConfigurationList = 6514C2F01DECEC4200681374 /* Build configuration list for PBXNativeTarget "TwistExample-iOS" */;
 			buildPhases = (
 				6514C2DD1DECEC4200681374 /* Sources */,
 				6514C2DE1DECEC4200681374 /* Frameworks */,
 				6514C2DF1DECEC4200681374 /* Resources */,
+				9203548A1DEDACC900A16573 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				920354891DEDACC900A16573 /* PBXTargetDependency */,
 			);
-			name = TwistExample;
+			name = "TwistExample-iOS";
 			productName = TwistExample;
-			productReference = 6514C2E11DECEC4200681374 /* TwistExample.app */;
+			productReference = 6514C2E11DECEC4200681374 /* TwistExample-iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -224,9 +266,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6514C2C01DECE9FE00681374 /* Twist */,
-				6514C2C91DECE9FE00681374 /* TwistTests */,
-				6514C2E01DECEC4200681374 /* TwistExample */,
+				6514C2C01DECE9FE00681374 /* Twist-iOS */,
+				6514C2C91DECE9FE00681374 /* TwistTests-iOS */,
+				6514C2E01DECEC4200681374 /* TwistExample-iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -289,8 +331,13 @@
 /* Begin PBXTargetDependency section */
 		6514C2CD1DECE9FE00681374 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6514C2C01DECE9FE00681374 /* Twist */;
+			target = 6514C2C01DECE9FE00681374 /* Twist-iOS */;
 			targetProxy = 6514C2CC1DECE9FE00681374 /* PBXContainerItemProxy */;
+		};
+		920354891DEDACC900A16573 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6514C2C01DECE9FE00681374 /* Twist-iOS */;
+			targetProxy = 920354881DEDACC900A16573 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -355,7 +402,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -402,7 +449,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -422,11 +469,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Twist/Info.plist;
+				INFOPLIST_FILE = Sources/Twist/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.crossroadlabs.Twist;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -442,11 +489,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Twist/Info.plist;
+				INFOPLIST_FILE = Sources/Twist/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.crossroadlabs.Twist;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -456,7 +503,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = TwistTests/Info.plist;
+				INFOPLIST_FILE = Tests/TwistTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.crossroadlabs.TwistTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -468,7 +515,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = TwistTests/Info.plist;
+				INFOPLIST_FILE = Tests/TwistTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.crossroadlabs.TwistTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -479,6 +526,7 @@
 		6514C2F11DECEC4200681374 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TwistExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -491,6 +539,7 @@
 		6514C2F21DECEC4200681374 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TwistExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -512,29 +561,32 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6514C2D51DECE9FE00681374 /* Build configuration list for PBXNativeTarget "Twist" */ = {
+		6514C2D51DECE9FE00681374 /* Build configuration list for PBXNativeTarget "Twist-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6514C2D61DECE9FE00681374 /* Debug */,
 				6514C2D71DECE9FE00681374 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		6514C2D81DECE9FE00681374 /* Build configuration list for PBXNativeTarget "TwistTests" */ = {
+		6514C2D81DECE9FE00681374 /* Build configuration list for PBXNativeTarget "TwistTests-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6514C2D91DECE9FE00681374 /* Debug */,
 				6514C2DA1DECE9FE00681374 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		6514C2F01DECEC4200681374 /* Build configuration list for PBXNativeTarget "TwistExample" */ = {
+		6514C2F01DECEC4200681374 /* Build configuration list for PBXNativeTarget "TwistExample-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6514C2F11DECEC4200681374 /* Debug */,
 				6514C2F21DECEC4200681374 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
