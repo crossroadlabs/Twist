@@ -15,6 +15,18 @@
 		6514C2E91DECEC4200681374 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6514C2E71DECEC4200681374 /* Main.storyboard */; };
 		6514C2EB1DECEC4200681374 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6514C2EA1DECEC4200681374 /* Assets.xcassets */; };
 		6514C2EE1DECEC4200681374 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6514C2EC1DECEC4200681374 /* LaunchScreen.storyboard */; };
+		65F621811DF0DCB1000F7846 /* Boilerplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65F6217B1DF0DCB1000F7846 /* Boilerplate.framework */; };
+		65F621821DF0DCB1000F7846 /* Event.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65F6217C1DF0DCB1000F7846 /* Event.framework */; };
+		65F621831DF0DCB1000F7846 /* ExecutionContext.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65F6217D1DF0DCB1000F7846 /* ExecutionContext.framework */; };
+		65F621841DF0DCB1000F7846 /* Future.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65F6217E1DF0DCB1000F7846 /* Future.framework */; };
+		65F621851DF0DCB1000F7846 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65F6217F1DF0DCB1000F7846 /* Result.framework */; };
+		65F621861DF0DCB1000F7846 /* RunLoop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65F621801DF0DCB1000F7846 /* RunLoop.framework */; };
+		65F621871DF0DCD6000F7846 /* Boilerplate.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 65F6217B1DF0DCB1000F7846 /* Boilerplate.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		65F621881DF0DCD6000F7846 /* Event.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 65F6217C1DF0DCB1000F7846 /* Event.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		65F621891DF0DCD6000F7846 /* ExecutionContext.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 65F6217D1DF0DCB1000F7846 /* ExecutionContext.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		65F6218A1DF0DCD6000F7846 /* Future.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 65F6217E1DF0DCB1000F7846 /* Future.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		65F6218B1DF0DCD6000F7846 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 65F6217F1DF0DCB1000F7846 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		65F6218C1DF0DCD6000F7846 /* RunLoop.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 65F621801DF0DCB1000F7846 /* RunLoop.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		920354861DEDACC900A16573 /* Twist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6514C2C11DECE9FE00681374 /* Twist.framework */; };
 		920354871DEDACC900A16573 /* Twist.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6514C2C11DECE9FE00681374 /* Twist.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -44,6 +56,12 @@
 			dstSubfolderSpec = 10;
 			files = (
 				920354871DEDACC900A16573 /* Twist.framework in Embed Frameworks */,
+				65F621871DF0DCD6000F7846 /* Boilerplate.framework in Embed Frameworks */,
+				65F621881DF0DCD6000F7846 /* Event.framework in Embed Frameworks */,
+				65F621891DF0DCD6000F7846 /* ExecutionContext.framework in Embed Frameworks */,
+				65F6218A1DF0DCD6000F7846 /* Future.framework in Embed Frameworks */,
+				65F6218B1DF0DCD6000F7846 /* Result.framework in Embed Frameworks */,
+				65F6218C1DF0DCD6000F7846 /* RunLoop.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,6 +82,12 @@
 		6514C2EA1DECEC4200681374 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6514C2ED1DECEC4200681374 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6514C2EF1DECEC4200681374 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65F6217B1DF0DCB1000F7846 /* Boilerplate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Boilerplate.framework; path = Carthage/Build/iOS/Boilerplate.framework; sourceTree = "<group>"; };
+		65F6217C1DF0DCB1000F7846 /* Event.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Event.framework; path = Carthage/Build/iOS/Event.framework; sourceTree = "<group>"; };
+		65F6217D1DF0DCB1000F7846 /* ExecutionContext.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExecutionContext.framework; path = Carthage/Build/iOS/ExecutionContext.framework; sourceTree = "<group>"; };
+		65F6217E1DF0DCB1000F7846 /* Future.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Future.framework; path = Carthage/Build/iOS/Future.framework; sourceTree = "<group>"; };
+		65F6217F1DF0DCB1000F7846 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		65F621801DF0DCB1000F7846 /* RunLoop.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RunLoop.framework; path = Carthage/Build/iOS/RunLoop.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +95,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65F621811DF0DCB1000F7846 /* Boilerplate.framework in Frameworks */,
+				65F621821DF0DCB1000F7846 /* Event.framework in Frameworks */,
+				65F621831DF0DCB1000F7846 /* ExecutionContext.framework in Frameworks */,
+				65F621841DF0DCB1000F7846 /* Future.framework in Frameworks */,
+				65F621851DF0DCB1000F7846 /* Result.framework in Frameworks */,
+				65F621861DF0DCB1000F7846 /* RunLoop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +130,7 @@
 				9203547F1DEDAC2400A16573 /* Tests */,
 				6514C2E21DECEC4200681374 /* TwistExample */,
 				6514C2C21DECE9FE00681374 /* Products */,
+				65F6217A1DF0DCB1000F7846 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,6 +173,19 @@
 				6514C2EF1DECEC4200681374 /* Info.plist */,
 			);
 			path = TwistExample;
+			sourceTree = "<group>";
+		};
+		65F6217A1DF0DCB1000F7846 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				65F6217B1DF0DCB1000F7846 /* Boilerplate.framework */,
+				65F6217C1DF0DCB1000F7846 /* Event.framework */,
+				65F6217D1DF0DCB1000F7846 /* ExecutionContext.framework */,
+				65F6217E1DF0DCB1000F7846 /* Future.framework */,
+				65F6217F1DF0DCB1000F7846 /* Result.framework */,
+				65F621801DF0DCB1000F7846 /* RunLoop.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		9203547E1DEDAC1F00A16573 /* Sources */ = {
@@ -469,6 +513,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Sources/Twist/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -489,6 +537,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Sources/Twist/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
