@@ -15,3 +15,48 @@
 //===----------------------------------------------------------------------===//
 
 import Foundation
+import UIKit
+
+import Boilerplate
+import ExecutionContext
+import Future
+
+extension UIView : ExecutionContextTenantProtocol {
+    public var context: ExecutionContextProtocol {
+        get {
+            return ExecutionContext.main
+        }
+    }
+}
+
+public extension UIView {
+    public class func animate(duration: Timeout, animation: @escaping () -> Void) -> Future<Bool> {
+        let promise = Promise<Bool>()
+        self.animate(withDuration: duration.timeInterval, animations: animation) { finished in
+            try! promise.success(value: finished)
+        }
+        return promise.future
+    }
+    
+    public class func animate(duration: Timeout, delay: Timeout, options: UIViewAnimationOptions = [], animation: @escaping () -> Void) -> Future<Bool> {
+        let promise = Promise<Bool>()
+        self.animate(withDuration: duration.timeInterval, delay: delay.timeInterval, options: options, animations: animation) { finished in
+            try! promise.success(value: finished)
+        }
+        return promise.future
+    }
+}
+
+public extension PropertyDescriptor where Component : UIView {
+    public static var hidden:MutablePropertyDescriptor<Component, MutableObservable<Bool>> {
+        get {
+            return NSPropertyDescriptor(name: #keyPath(UIView.hidden))
+        }
+    }
+    
+    public static var alpha:MutablePropertyDescriptor<Component, MutableObservable<CGFloat>> {
+        get {
+            return NSPropertyDescriptor(name: #keyPath(UIView.alpha))
+        }
+    }
+}
