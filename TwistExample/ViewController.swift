@@ -24,8 +24,8 @@ class ViewController: UIViewController {
         text2?.isHidden = true
         UIView.animate(duration: 4) {
             self.text1?.alpha = 1
-            }.onSuccess { completed in
-                self.text2?.isHidden = false
+        }.onSuccess { completed in
+            self.text2?.isHidden = false
         }
         
         slider?.property(.value).stream.map {
