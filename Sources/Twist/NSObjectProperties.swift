@@ -19,6 +19,7 @@ import Foundation
 import ExecutionContext
 import Event
 
+//TODO: uncycle the chains for NSObject 
 private class KVOProcessor<T> : NSObject {
     private unowned let _stream:KVOSignalStream<T>
     

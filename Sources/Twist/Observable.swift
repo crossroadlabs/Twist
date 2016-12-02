@@ -71,10 +71,11 @@ public extension ObservableProtocol where Self : AccessableProtocol {
     var stream:SignalStream<Payload> {
         get {
             let node = SignalNode<Payload>(context: context)
+            let sig:Set<Int> = [self.signature]
             //TODO: WTF?
             let off = self.on(.didChange).map {(_, value) in value}.pour(to: node)
             async { value in
-                node <= value
+                node.signal(signature: sig, payload: value)
             }
             return node
         }
@@ -82,15 +83,18 @@ public extension ObservableProtocol where Self : AccessableProtocol {
 }
 
 public extension ObservableProtocol {
-    public func react(_ f: @escaping Handler) -> Off {
-        return self.on(.didChange).map {(_, value) in value}.react(f)
+    public func chain(_ f: @escaping Chainer) -> Off {
+        return self.on(.didChange).map {(_, value) in value}.chain(f)
     }
 }
 
 public extension ObservableProtocol where Self : AccessableProtocol {
-    public func react(_ f: @escaping Handler) -> Off {
-        let off = self.on(.didChange).map {(_, value) in value}.react(f)
-        async(f)
+    public func chain(_ f: @escaping Chainer) -> Off {
+        let sig:Set<Int> = [self.signature]
+        let off = self.on(.didChange).map {(_, value) in value}.chain(f)
+        async { payload in
+            f((sig, payload))
+        }
         return off
     }
 }
@@ -249,7 +253,12 @@ public class ObservableValue<T> : MutableObservableProtocol {
 }
 
 extension MutableObservableProtocol {
-    public func consume(payload: Payload) {
+    public func signal(signature:Set<Int>, payload: Payload) {
+        //drop the chain. We've been here
+        if signature.contains(self.signature) {
+            return
+        }
+        
         async { _, mutator in
             mutator(payload)
         }

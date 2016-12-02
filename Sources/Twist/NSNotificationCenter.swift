@@ -16,7 +16,11 @@
 
 import Foundation
 
+import Boilerplate
 import Event
+
+extension NotificationCenter : SignatureProvider {
+}
 
 public struct NotificationObject {
     private let _center:NotificationCenter
@@ -28,10 +32,12 @@ public struct NotificationObject {
     }
     
     public func on(_ name: Notification.Name) -> SignalStream<Notification> {
+        let sig:Set<Int> = [_center.signature]
+        
         let node = SignalNode<Notification>()
         //TODO: fix leak
         let _ = _center.addObserver(forName: name, object: _object, queue: nil) { notification in
-            node.consume(payload: notification)
+            node.signal(signature: sig, payload: notification)
         }
         return node
     }
