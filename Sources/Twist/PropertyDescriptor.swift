@@ -55,7 +55,7 @@ open class MutablePropertyDescriptor<Component : ExecutionContextTenantProtocol,
             return self._subscribe(component, early)
             }, accessor: {
                 return self._accessor(component)
-            }, mutator: { payload in
+            }, mutator: { _, payload in
                 return self._mutator(component, payload)
         })
     }

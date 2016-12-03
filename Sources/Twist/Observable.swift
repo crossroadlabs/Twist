@@ -101,11 +101,19 @@ public extension ObservableProtocol where Self : AccessableProtocol {
 
 public protocol MutableObservableProtocol : ObservableProtocol, AccessableProtocol, SignalNodeProtocol {
     //function passed for mutation
-    typealias Mutator = (Payload) -> Void
+    typealias Mutator = (Signal<Payload>) -> Void
     
     //current, mutator
     func async(_ f:@escaping (Payload, Mutator)->Void)
     func sync(_ f:@escaping (Payload, Mutator)->Void) -> Payload
+}
+
+public extension MutableObservableProtocol {
+    public func mutate(_ f:@escaping (Payload, (Payload)->Void)->Void) {
+        async { payload, mutator in
+            mutator(([], payload))
+        }
+    }
 }
 
 public extension MutableObservableProtocol {
@@ -130,7 +138,7 @@ public protocol ParametrizableObservableProtocol : ObservableProtocol {
 
 public protocol ParametrizableMutableObservableProtocol : ParametrizableObservableProtocol, MutableObservableProtocol {
     typealias Accessor = () -> Payload
-    typealias Mutator = (Payload) -> Void
+    typealias Mutator = (Signal<Payload>) -> Void
     
     init(context:ExecutionContextProtocol, subscriber:@escaping Subscriber, accessor:@escaping Accessor, mutator:@escaping Mutator)
 }
@@ -163,7 +171,7 @@ public class ReadonlyObservable<T> : ParametrizableObservableProtocol {
 public class MutableObservable<T> : ReadonlyObservable<T>, ParametrizableMutableObservableProtocol {
     public typealias ChangePayload = (Payload, Payload)
     public typealias Accessor = () -> Payload
-    public typealias Mutator = (Payload) -> Void
+    public typealias Mutator = (Signal<Payload>) -> Void
     
     private let _accessor:Accessor
     private let _mutator:Mutator
@@ -200,7 +208,7 @@ public class ObservableValue<T> : MutableObservableProtocol {
     public typealias ChangePayload = (Payload, Payload)
     
     //function passed for mutation
-    public typealias Mutator = (Payload) -> Void
+    public typealias Mutator = (Signal<Payload>) -> Void
     
     public let dispatcher:EventDispatcher = EventDispatcher()
     public let context: ExecutionContextProtocol
@@ -212,11 +220,11 @@ public class ObservableValue<T> : MutableObservableProtocol {
         self.context = context
     }
     
-    private func mutate(value:T) {
+    private func _mutate(signature:Set<Int>, value:T) {
         let old = _var
-        emit(.willChange, payload: (old, value))
+        self.emit(.willChange, payload: (old, value), signature: signature)
         _var = value
-        emit(.didChange, payload: (old, value))
+        self.emit(.didChange, payload: (old, value), signature: signature)
     }
     
     public func on(_ groupedEvent: ObservableEventGroup<ChangePayload, ObservableWillChangeEvent<ChangePayload>>) -> SignalStream<ChangePayload> {
@@ -225,10 +233,6 @@ public class ObservableValue<T> : MutableObservableProtocol {
     
     public func on(_ groupedEvent: ObservableEventGroup<ChangePayload, ObservableDidChangeEvent<ChangePayload>>) -> SignalStream<ChangePayload> {
         return self.on(groupedEvent.event)
-    }
-    
-    private func emit<E : Event>(_ groupedEvent: ObservableEventGroup<ChangePayload, E>, payload:E.Payload) {
-        self.emit(groupedEvent.event, payload: payload)
     }
     
     public func async(_ f:@escaping (Payload)->Void) {
@@ -240,27 +244,28 @@ public class ObservableValue<T> : MutableObservableProtocol {
     //current, mutator
     public func async(_ f:@escaping (Payload, Mutator)->Void) {
         context.async {
-            f(self._var, self.mutate)
+            f(self._var, self._mutate)
         }
     }
     
     public func sync(_ f:@escaping (Payload, Mutator)->Void = {_,_ in}) -> T {
         return context.sync {
-            f(self._var, self.mutate)
+            f(self._var, self._mutate)
             return self._var
         }
     }
 }
 
 extension MutableObservableProtocol {
+    fileprivate func emit<E : Event>(_ groupedEvent: ObservableEventGroup<ChangePayload, E>, payload:E.Payload, signature:Set<Int>) {
+        self.emit(groupedEvent.event, payload: payload, signature:signature)
+    }
+}
+
+extension MutableObservableProtocol {
     public func signal(signature:Set<Int>, payload: Payload) {
-        //drop the chain. We've been here
-        if signature.contains(self.signature) {
-            return
-        }
-        
         async { _, mutator in
-            mutator(payload)
+            mutator((signature, payload))
         }
     }
 }

@@ -20,6 +20,16 @@ class ViewController: UIViewController {
     var bucket = DisposalBucket()
 
     override func viewDidLoad() {
+        let b1 = ObservableValue(false)
+        let b2 = ObservableValue(false)
+        
+        b1.bind(to: b2) => bucket
+        
+        b1.react { b in
+            print("!!!!blabla!!!", b)
+        } => bucket
+        
+        
         text1?.alpha = 0
         text2?.isHidden = true
         UIView.animate(duration: 4) {
@@ -77,7 +87,7 @@ class ViewController: UIViewController {
             print("!!!WILL:", old, new)
             } => bucket
         
-        sss.async { sss, mutate in
+        sss.mutate { sss, mutate in
             mutate(sss + "123")
         }
         
@@ -87,7 +97,7 @@ class ViewController: UIViewController {
         
         text1?.property(.text).react { text in
             print("$$$$$$$$$$$$$$$$$$$$$$$$$$$", text)
-            } => bucket
+        } => bucket
         
         
         // Do any additional setup after loading the view, typically from a nib.
