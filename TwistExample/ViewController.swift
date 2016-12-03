@@ -20,8 +20,8 @@ class ViewController: UIViewController {
     var bucket = DisposalBucket()
 
     override func viewDidLoad() {
-        let b1 = ObservableValue(false)
-        let b2 = ObservableValue(false)
+        let b1 = ObservableValue(1)
+        let b2 = ObservableValue(2)
         
         b1.bind(to: b2) => bucket
         
@@ -29,6 +29,11 @@ class ViewController: UIViewController {
             print("!!!!blabla!!!", b)
         } => bucket
         
+        b2.react { b in
+            print("!!!!mmmmmm!!!", b)
+        } => bucket
+        
+        b1 <= 3
         
         text1?.alpha = 0
         text2?.isHidden = true
@@ -98,7 +103,6 @@ class ViewController: UIViewController {
         text1?.property(.text).react { text in
             print("$$$$$$$$$$$$$$$$$$$$$$$$$$$", text)
         } => bucket
-        
         
         // Do any additional setup after loading the view, typically from a nib.
         

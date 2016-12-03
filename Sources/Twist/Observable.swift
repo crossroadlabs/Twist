@@ -89,13 +89,28 @@ public extension ObservableProtocol {
 }
 
 public extension ObservableProtocol where Self : AccessableProtocol {
+    internal func chainNoInitial(_ f: @escaping Chainer) -> Off {
+        return self.on(.didChange).map {(_, value) in value}.chain(f)
+    }
+    
     public func chain(_ f: @escaping Chainer) -> Off {
         let sig:Set<Int> = [self.signature]
-        let off = self.on(.didChange).map {(_, value) in value}.chain(f)
         async { payload in
             f((sig, payload))
         }
-        return off
+        return self.on(.didChange).map {(_, value) in value}.chain(f)
+    }
+}
+
+public extension SignalNodeProtocol where Self : ObservableProtocol, Self : AccessableProtocol {
+    public func bind<SN : SignalNodeProtocol>(to node: SN) -> Off where SN.Payload == Payload {
+        let forth = chainNoInitial(node.signal)
+        let back = subscribe(to: node)
+        
+        return {
+            forth()
+            back()
+        }
     }
 }
 
@@ -187,7 +202,7 @@ public class MutableObservable<T> : ReadonlyObservable<T>, ParametrizableMutable
     }
     
     public func async(_ f: @escaping (T, Mutator) -> Void) {
-        context.async {
+        context.immediateIfCurrent {
             f(self._accessor(), self._mutator)
         }
     }
@@ -236,14 +251,14 @@ public class ObservableValue<T> : MutableObservableProtocol {
     }
     
     public func async(_ f:@escaping (Payload)->Void) {
-        context.async {
+        context.immediateIfCurrent {
             f(self._var)
         }
     }
     
     //current, mutator
     public func async(_ f:@escaping (Payload, Mutator)->Void) {
-        context.async {
+        context.immediateIfCurrent {
             f(self._var, self._mutate)
         }
     }
