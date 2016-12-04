@@ -58,7 +58,7 @@ class ViewController: UIViewController {
         
         let node = ObservableValue("OK") //SignalNode<String>()
         bucket <= node.bind(to: text1!, on: .text)
-        node.bind(to: text2!, on: .text) => bucket
+        node.debounce(timeout: 0.5).pour(to: text2!, on: .text) => bucket
         
         //stream.pour(to: text2!, on: .text) => bucket
         //endpoint.subscribe(to: text2!, on: .text) => bucket
