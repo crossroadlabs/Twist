@@ -15,6 +15,33 @@
 		6514C2E91DECEC4200681374 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6514C2E71DECEC4200681374 /* Main.storyboard */; };
 		6514C2EB1DECEC4200681374 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6514C2EA1DECEC4200681374 /* Assets.xcassets */; };
 		6514C2EE1DECEC4200681374 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6514C2EC1DECEC4200681374 /* LaunchScreen.storyboard */; };
+		65F621811DF0DCB1000F7846 /* Boilerplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65F6217B1DF0DCB1000F7846 /* Boilerplate.framework */; };
+		65F621821DF0DCB1000F7846 /* Event.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65F6217C1DF0DCB1000F7846 /* Event.framework */; };
+		65F621831DF0DCB1000F7846 /* ExecutionContext.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65F6217D1DF0DCB1000F7846 /* ExecutionContext.framework */; };
+		65F621841DF0DCB1000F7846 /* Future.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65F6217E1DF0DCB1000F7846 /* Future.framework */; };
+		65F621851DF0DCB1000F7846 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65F6217F1DF0DCB1000F7846 /* Result.framework */; };
+		65F621861DF0DCB1000F7846 /* RunLoop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65F621801DF0DCB1000F7846 /* RunLoop.framework */; };
+		65F621871DF0DCD6000F7846 /* Boilerplate.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 65F6217B1DF0DCB1000F7846 /* Boilerplate.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		65F621881DF0DCD6000F7846 /* Event.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 65F6217C1DF0DCB1000F7846 /* Event.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		65F621891DF0DCD6000F7846 /* ExecutionContext.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 65F6217D1DF0DCB1000F7846 /* ExecutionContext.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		65F6218A1DF0DCD6000F7846 /* Future.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 65F6217E1DF0DCB1000F7846 /* Future.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		65F6218B1DF0DCD6000F7846 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 65F6217F1DF0DCB1000F7846 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		65F6218C1DF0DCD6000F7846 /* RunLoop.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 65F621801DF0DCB1000F7846 /* RunLoop.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		65F621901DF0DDD3000F7846 /* UIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F6218F1DF0DDD3000F7846 /* UIControl.swift */; };
+		65F621921DF0E7DE000F7846 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F621911DF0E7DE000F7846 /* UITextField.swift */; };
+		65F621941DF0E8F2000F7846 /* NSNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F621931DF0E8F2000F7846 /* NSNotificationCenter.swift */; };
+		65F621961DF0EA12000F7846 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F621951DF0EA12000F7846 /* UIButton.swift */; };
+		65F621981DF0EA6A000F7846 /* UISlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F621971DF0EA6A000F7846 /* UISlider.swift */; };
+		65F6219A1DF0ED7D000F7846 /* NSObjectProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F621991DF0ED7D000F7846 /* NSObjectProperties.swift */; };
+		65F6219C1DF0EE67000F7846 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F6219B1DF0EE67000F7846 /* Observable.swift */; };
+		65F6219E1DF0F15F000F7846 /* PropertyDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F6219D1DF0F15F000F7846 /* PropertyDescriptor.swift */; };
+		65F621A01DF0F35C000F7846 /* ObservableSignals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F6219F1DF0F35C000F7846 /* ObservableSignals.swift */; };
+		65F621A61DF0F8CB000F7846 /* Boilerplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65F6217B1DF0DCB1000F7846 /* Boilerplate.framework */; };
+		65F621A71DF0F8CB000F7846 /* Event.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65F6217C1DF0DCB1000F7846 /* Event.framework */; };
+		65F621A81DF0F8CB000F7846 /* ExecutionContext.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65F6217D1DF0DCB1000F7846 /* ExecutionContext.framework */; };
+		65F621A91DF0F8CB000F7846 /* Future.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65F6217E1DF0DCB1000F7846 /* Future.framework */; };
+		65F621AA1DF0F8CB000F7846 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65F6217F1DF0DCB1000F7846 /* Result.framework */; };
+		65F621AB1DF0F8CB000F7846 /* RunLoop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65F621801DF0DCB1000F7846 /* RunLoop.framework */; };
 		920354861DEDACC900A16573 /* Twist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6514C2C11DECE9FE00681374 /* Twist.framework */; };
 		920354871DEDACC900A16573 /* Twist.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6514C2C11DECE9FE00681374 /* Twist.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -44,6 +71,12 @@
 			dstSubfolderSpec = 10;
 			files = (
 				920354871DEDACC900A16573 /* Twist.framework in Embed Frameworks */,
+				65F621871DF0DCD6000F7846 /* Boilerplate.framework in Embed Frameworks */,
+				65F621881DF0DCD6000F7846 /* Event.framework in Embed Frameworks */,
+				65F621891DF0DCD6000F7846 /* ExecutionContext.framework in Embed Frameworks */,
+				65F6218A1DF0DCD6000F7846 /* Future.framework in Embed Frameworks */,
+				65F6218B1DF0DCD6000F7846 /* Result.framework in Embed Frameworks */,
+				65F6218C1DF0DCD6000F7846 /* RunLoop.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,6 +97,21 @@
 		6514C2EA1DECEC4200681374 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6514C2ED1DECEC4200681374 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6514C2EF1DECEC4200681374 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65F6217B1DF0DCB1000F7846 /* Boilerplate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Boilerplate.framework; path = Carthage/Build/iOS/Boilerplate.framework; sourceTree = "<group>"; };
+		65F6217C1DF0DCB1000F7846 /* Event.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Event.framework; path = Carthage/Build/iOS/Event.framework; sourceTree = "<group>"; };
+		65F6217D1DF0DCB1000F7846 /* ExecutionContext.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExecutionContext.framework; path = Carthage/Build/iOS/ExecutionContext.framework; sourceTree = "<group>"; };
+		65F6217E1DF0DCB1000F7846 /* Future.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Future.framework; path = Carthage/Build/iOS/Future.framework; sourceTree = "<group>"; };
+		65F6217F1DF0DCB1000F7846 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		65F621801DF0DCB1000F7846 /* RunLoop.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RunLoop.framework; path = Carthage/Build/iOS/RunLoop.framework; sourceTree = "<group>"; };
+		65F6218F1DF0DDD3000F7846 /* UIControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControl.swift; sourceTree = "<group>"; };
+		65F621911DF0E7DE000F7846 /* UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		65F621931DF0E8F2000F7846 /* NSNotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSNotificationCenter.swift; sourceTree = "<group>"; };
+		65F621951DF0EA12000F7846 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		65F621971DF0EA6A000F7846 /* UISlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISlider.swift; sourceTree = "<group>"; };
+		65F621991DF0ED7D000F7846 /* NSObjectProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectProperties.swift; sourceTree = "<group>"; };
+		65F6219B1DF0EE67000F7846 /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		65F6219D1DF0F15F000F7846 /* PropertyDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyDescriptor.swift; sourceTree = "<group>"; };
+		65F6219F1DF0F35C000F7846 /* ObservableSignals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableSignals.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +119,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65F621811DF0DCB1000F7846 /* Boilerplate.framework in Frameworks */,
+				65F621821DF0DCB1000F7846 /* Event.framework in Frameworks */,
+				65F621831DF0DCB1000F7846 /* ExecutionContext.framework in Frameworks */,
+				65F621841DF0DCB1000F7846 /* Future.framework in Frameworks */,
+				65F621851DF0DCB1000F7846 /* Result.framework in Frameworks */,
+				65F621861DF0DCB1000F7846 /* RunLoop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +141,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				920354861DEDACC900A16573 /* Twist.framework in Frameworks */,
+				65F621A61DF0F8CB000F7846 /* Boilerplate.framework in Frameworks */,
+				65F621A71DF0F8CB000F7846 /* Event.framework in Frameworks */,
+				65F621A81DF0F8CB000F7846 /* ExecutionContext.framework in Frameworks */,
+				65F621A91DF0F8CB000F7846 /* Future.framework in Frameworks */,
+				65F621AA1DF0F8CB000F7846 /* Result.framework in Frameworks */,
+				65F621AB1DF0F8CB000F7846 /* RunLoop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +160,7 @@
 				9203547F1DEDAC2400A16573 /* Tests */,
 				6514C2E21DECEC4200681374 /* TwistExample */,
 				6514C2C21DECE9FE00681374 /* Products */,
+				65F6217A1DF0DCB1000F7846 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,7 +178,16 @@
 			isa = PBXGroup;
 			children = (
 				6514C2C51DECE9FE00681374 /* Info.plist */,
+				65F621931DF0E8F2000F7846 /* NSNotificationCenter.swift */,
+				65F621991DF0ED7D000F7846 /* NSObjectProperties.swift */,
+				65F6219D1DF0F15F000F7846 /* PropertyDescriptor.swift */,
 				6514C2DB1DECEA4300681374 /* UIView.swift */,
+				65F6218F1DF0DDD3000F7846 /* UIControl.swift */,
+				65F621911DF0E7DE000F7846 /* UITextField.swift */,
+				65F621951DF0EA12000F7846 /* UIButton.swift */,
+				65F621971DF0EA6A000F7846 /* UISlider.swift */,
+				65F6219B1DF0EE67000F7846 /* Observable.swift */,
+				65F6219F1DF0F35C000F7846 /* ObservableSignals.swift */,
 			);
 			path = Twist;
 			sourceTree = "<group>";
@@ -142,6 +212,19 @@
 				6514C2EF1DECEC4200681374 /* Info.plist */,
 			);
 			path = TwistExample;
+			sourceTree = "<group>";
+		};
+		65F6217A1DF0DCB1000F7846 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				65F6217B1DF0DCB1000F7846 /* Boilerplate.framework */,
+				65F6217C1DF0DCB1000F7846 /* Event.framework */,
+				65F6217D1DF0DCB1000F7846 /* ExecutionContext.framework */,
+				65F6217E1DF0DCB1000F7846 /* Future.framework */,
+				65F6217F1DF0DCB1000F7846 /* Result.framework */,
+				65F621801DF0DCB1000F7846 /* RunLoop.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		9203547E1DEDAC1F00A16573 /* Sources */ = {
@@ -305,7 +388,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65F621A01DF0F35C000F7846 /* ObservableSignals.swift in Sources */,
+				65F6219E1DF0F15F000F7846 /* PropertyDescriptor.swift in Sources */,
+				65F6219C1DF0EE67000F7846 /* Observable.swift in Sources */,
+				65F6219A1DF0ED7D000F7846 /* NSObjectProperties.swift in Sources */,
+				65F621981DF0EA6A000F7846 /* UISlider.swift in Sources */,
+				65F621961DF0EA12000F7846 /* UIButton.swift in Sources */,
 				6514C2DC1DECEA4300681374 /* UIView.swift in Sources */,
+				65F621901DF0DDD3000F7846 /* UIControl.swift in Sources */,
+				65F621941DF0E8F2000F7846 /* NSNotificationCenter.swift in Sources */,
+				65F621921DF0E7DE000F7846 /* UITextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +561,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Sources/Twist/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -489,6 +585,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Sources/Twist/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -528,6 +628,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TwistExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.crossroadlabs.TwistExample;
@@ -541,6 +645,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TwistExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.crossroadlabs.TwistExample;

@@ -1,0 +1,2 @@
+github "reactive-swift/Event" "master"
+github "reactive-swift/Future" "master"
