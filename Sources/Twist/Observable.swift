@@ -95,10 +95,11 @@ public extension ObservableProtocol where Self : AccessableProtocol {
     
     public func chain(_ f: @escaping Chainer) -> Off {
         let sig:Set<Int> = [self.signature]
+        let off = self.on(.didChange).map {(_, value) in value}.chain(f)
         async { payload in
             f((sig, payload))
         }
-        return self.on(.didChange).map {(_, value) in value}.chain(f)
+        return off
     }
 }
 
@@ -126,7 +127,9 @@ public protocol MutableObservableProtocol : ObservableProtocol, AccessableProtoc
 public extension MutableObservableProtocol {
     public func mutate(_ f:@escaping (Payload, (Payload)->Void)->Void) {
         async { payload, mutator in
-            mutator(([], payload))
+            f(payload) { new in
+                mutator(([], new))
+            }
         }
     }
 }
