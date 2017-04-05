@@ -1,2 +1,2 @@
-github "reactive-swift/Event" "master"
-github "reactive-swift/Future" "master"
+github "reactive-swift/Event" ~> 0.3
+github "reactive-swift/Future" ~> 0.2
